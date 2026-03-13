@@ -15,8 +15,9 @@ export default function HomePage() {
         color: '#F0EDE8'
       }}>
         <div style={{ textAlign: 'center' }}>
-          <h1>🎯 وِجهة</h1>
-          <p>اكتشف العروض القريبة منك</p>
+          <div style={{ fontSize: '48px', marginBottom: '16px' }}>🎯</div>
+          <h1 style={{ fontSize: '28px', marginBottom: '8px', color: '#F0EDE8' }}>وِجهة</h1>
+          <p style={{ marginBottom: '24px', color: '#9CA3AF' }}>اكتشف العروض القريبة منك</p>
           <button 
             onClick={() => setIsLoggedIn(true)}
             style={{
@@ -26,7 +27,8 @@ export default function HomePage() {
               border: 'none',
               borderRadius: '8px',
               fontSize: '16px',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              fontWeight: 'bold'
             }}
           >
             دخول تجريبي
@@ -44,8 +46,8 @@ export default function HomePage() {
       backgroundColor: '#080608', 
       minHeight: '100vh' 
     }}>
-      <h1>🎯 مرحباً بك في وِجهة</h1>
-      <p>تم تسجيل الدخول بنجاح!</p>
+      <h1 style={{ color: '#F0EDE8', marginBottom: '16px' }}>🎯 مرحباً بك في وِجهة</h1>
+      <p style={{ color: '#9CA3AF', marginBottom: '24px' }}>تم تسجيل الدخول بنجاح!</p>
       <button 
         onClick={() => setIsLoggedIn(false)}
         style={{ 
@@ -54,7 +56,8 @@ export default function HomePage() {
           color: 'white', 
           border: 'none', 
           borderRadius: '8px',
-          cursor: 'pointer'
+          cursor: 'pointer',
+          fontWeight: 'bold'
         }}
       >
         تسجيل خروج
