@@ -3,7 +3,7 @@ import { useState } from 'react'
 import CustomerAuth from '../components/CustomerAuth'
 
 export default function HomePage() {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState<any>(null)
 
   if (!user) {
     return <CustomerAuth onLogin={setUser} language="ar" />
