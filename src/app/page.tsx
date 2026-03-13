@@ -1,12 +1,39 @@
 'use client'
 import { useState } from 'react'
-import CustomerAuth from '../components/CustomerAuth'
 
 export default function HomePage() {
-  const [user, setUser] = useState<any>(null)
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
 
-  if (!user) {
-    return <CustomerAuth onLogin={setUser} language="ar" />
+  if (!isLoggedIn) {
+    return (
+      <div style={{
+        minHeight: '100vh',
+        background: '#080608',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: '#F0EDE8'
+      }}>
+        <div style={{ textAlign: 'center' }}>
+          <h1>🎯 وِجهة</h1>
+          <p>اكتشف العروض القريبة منك</p>
+          <button 
+            onClick={() => setIsLoggedIn(true)}
+            style={{
+              padding: '16px 32px',
+              background: '#8B1F24',
+              color: 'white',
+              border: 'none',
+              borderRadius: '8px',
+              fontSize: '16px',
+              cursor: 'pointer'
+            }}
+          >
+            دخول تجريبي
+          </button>
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -20,7 +47,7 @@ export default function HomePage() {
       <h1>🎯 مرحباً بك في وِجهة</h1>
       <p>تم تسجيل الدخول بنجاح!</p>
       <button 
-        onClick={() => setUser(null)}
+        onClick={() => setIsLoggedIn(false)}
         style={{ 
           padding: '10px 20px', 
           backgroundColor: '#8B1F24', 
