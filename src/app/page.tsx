@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import CustomerAuth from '../../../components/CustomerAuth'
+import CustomerAuth from '../components/CustomerAuth'
 
 export default function HomePage() {
   const [user, setUser] = useState(null)
