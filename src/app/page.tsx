@@ -18,7 +18,7 @@ export default function HomePage() {
       minHeight: '100vh' 
     }}>
       <h1>🎯 مرحباً بك في وِجهة</h1>
-      <p>أهلاً {user.phone}</p>
+      <p>تم تسجيل الدخول بنجاح!</p>
       <button 
         onClick={() => setUser(null)}
         style={{ 
@@ -26,7 +26,8 @@ export default function HomePage() {
           backgroundColor: '#8B1F24', 
           color: 'white', 
           border: 'none', 
-          borderRadius: '8px' 
+          borderRadius: '8px',
+          cursor: 'pointer'
         }}
       >
         تسجيل خروج
